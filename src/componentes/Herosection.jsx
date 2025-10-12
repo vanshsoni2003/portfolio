@@ -1,8 +1,9 @@
+const base = import.meta.env.BASE_URL;
 const Herosection = ()=>{
     return(
         <>
-           <div className="bg-[#051423] text-white py-10 px-5 md:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+           <div className="bg-[#051423] text-white py-10 px-5 md:px-20 h-[100vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 mt-14">
 
           <div>
             <h1
@@ -27,9 +28,16 @@ With experience in frameworks like React and Tailwind CSS, I build modern, inter
               <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-all">
                 Hire me
               </button>
-              <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-600 hover:text-white transition-all">
-                Let's talk
-              </button>
+             <a
+  href="https://wa.me/916354459943?text=Hi%20Vansh%2C%20I%27m%20interested%20in%20working%20with%20you."
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-600 hover:text-white transition-all">
+    Let’s Talk on WhatsApp
+  </button>
+</a>
+
             </div>
 
             <div className="flex flex-wrap gap-6">
@@ -41,8 +49,8 @@ With experience in frameworks like React and Tailwind CSS, I build modern, inter
           <div className="flex justify-center">
             <div className="w-[250px] sm:w-[300px] md:w-[400px] lg:w-[500px] aspect-square rounded-full border-4 border-blue-500 shadow-[0_0_30px_#00bfff] overflow-hidden">
               <img
-                src="/images/profile.png"
-                alt="Profile"
+                img src={`${base}images/profile.png`} alt="pic"
+                // alt="Profile"
                 className="w-full h-full object-cover"
               />
             </div>
