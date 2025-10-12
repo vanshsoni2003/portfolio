@@ -2,6 +2,9 @@ import { useState } from "react";
 
 const base = import.meta.env.BASE_URL;
 
+// ✅ Update this to your live backend URL
+const BACKEND_URL = "https://portfolio-r6bb.onrender.com";
+
 const Contactus = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,7 +18,7 @@ const Contactus = () => {
     setStatus("Sending...");
 
     try {
-      const res = await fetch("http://localhost:5000/api/register", {
+      const res = await fetch(`${BACKEND_URL}/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
